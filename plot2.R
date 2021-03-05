@@ -30,7 +30,6 @@ HPCdfsub$DateTime <- strptime(HPCdfsub$DateTime, format = "%Y-%m-%d %H:%M:%S") #
 png(filename = "plot2.png", width = 480, height = 480, units = "px", bg = "transparent")
 
 # Constructing the plot
-HPCdfsub$DoW <- as.factor(weekdays(HPCdfsub$Date)) # day of the week (unnecessary?)
 plot(HPCdfsub$DateTime, HPCdfsub$Global_active_power, type = "l", xlab = "", 
      ylab = "Global Active Power (kilowatts)")
 
