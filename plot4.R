@@ -41,14 +41,13 @@ plot(HPCdfsub$DateTime, HPCdfsub$Global_active_power, type = "l", xlab = "",
 plot(HPCdfsub$DateTime, HPCdfsub$Voltage, type = "l", xlab = "datetime", 
      ylab = "Voltage")
 
-# subplot 3 (copied Plot 3 and adjusted legend)
-plot(HPCdfsub$DateTime, HPCdfsub$Sub_metering_1, type = "n", xlab = "", 
-     ylab = "Energy sub metering")
-lines(HPCdfsub$DateTime, HPCdfsub$Sub_metering_1, col = "black")
-lines(HPCdfsub$DateTime, HPCdfsub$Sub_metering_2, col = "red")
-lines(HPCdfsub$DateTime, HPCdfsub$Sub_metering_3, col = "blue")
+# subplot 3 (copied Plot 3 and adjusted legend bty)
+plot(HPCdfsub$DateTime, HPCdfsub$Sub_metering_1, type = "l", xlab = "", 
+     ylab = "Energy sub metering", col = "black") # build plot including Sub_metering_1
+lines(HPCdfsub$DateTime, HPCdfsub$Sub_metering_2, col = "red") # add Sub_metering_2
+lines(HPCdfsub$DateTime, HPCdfsub$Sub_metering_3, col = "blue") # add Sub_metering_3
 legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
-       col = c("black", "red", "blue"), lty = 1, lwd = 1, bty = "n")
+       col = c("black", "red", "blue"), lty = 1, lwd = 1, bty = "n") # add legend
 
 # subplot 4
 plot(HPCdfsub$DateTime, HPCdfsub$Global_reactive_power, type = "l", xlab = "datetime", 
